@@ -23,12 +23,6 @@ async def main():
 
     for el in elements:
         
-        raw_text = el.text_all.strip()
-        if raw_text == "":
-            continue
-
-        translate = await get_translate(raw_text)
-
         if el.tag == "img":
             src = el.attrs["src"]
             
@@ -38,12 +32,18 @@ async def main():
                 
             print(f"[+] Скачиваю иллюстрацию: {encoded_url}")
             try:
-                img_bytes = await download_image_bytes(encoded_url)
+                img_bytes = img_bytes = await asyncio.to_thread(download_image_bytes, encoded_url)
                 PDF.add_image(img_bytes)
             except Exception as e:
                 print(f"[-] Не удалось скачать картинку {encoded_url}: {e}")
                 
             continue
+
+        raw_text = el.text_all.strip()
+        if raw_text == "":
+            continue
+
+        translate = await get_translate(raw_text)
 
         if el.tag == "h1":
             PDF.add_header(translate)
@@ -53,7 +53,6 @@ async def main():
         with open("test.txt", "a", encoding="utf-8") as file:
             file.write(translate + "\n")
     PDF.save()
-    print("Всё готово! Книга собрана без потерь и косяков.")
 
 
 
