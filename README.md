@@ -1,9 +1,3 @@
-```python
-content = """# 💧 Slime Translate (Tensura Parser & Translator)
-
-[![Python Version](https://img.shields.io/badge/python-3.11%20%7C%203.13-blue?style=flat-square&logo=python)](https://www.python.org)
-[![Telegram Channel](https://img.shields.io/badge/Telegram-Channel-0088cc?style=flat-square&logo=telegram)](https://t.me/tensura_russia)
-
 Асинхронный парсер и автоматический переводчик ранобэ **«О моём перерождении в слизь» (That Time I Got Reincarnated as a Slime)**. Скрипт собирает текст и оригинальные иллюстрации с сайта, переводит контент на русский язык с помощью Google Translate и упаковывает всё в красивую, готовую для чтения электронную книгу в формате PDF с настроенными метаданными.
 
 ---
@@ -24,8 +18,6 @@ content = """# 💧 Slime Translate (Tensura Parser & Translator)
 
 Для начала склонируйте репозиторий, создайте и активируйте виртуальное окружение:
 
-
-```
 
 ```text
 README.md created successfully
