@@ -48,7 +48,7 @@ async def main():
         if translate is None:
             print(f"[!] Гугл вернул None для строки: '{raw_text[:40]}...'. Оставляю оригинал.")
             translate = raw_text
-
+            2
         if el.tag == "h1":
             PDF.add_header(translate)
         else:
