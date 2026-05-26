@@ -1,0 +1,5 @@
+deep-translator==1.11.4
+fpdf2==2.8.7
+nodriver==0.50.3
+requests==2.34.2
+urllib3==2.7.0

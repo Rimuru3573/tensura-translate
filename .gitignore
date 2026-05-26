@@ -1,0 +1,7 @@
+flake.nix
+flake.lock
+.venv
+__pycache__
+*.pyc
+test.txt
+test.py
